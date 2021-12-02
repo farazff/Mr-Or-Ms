@@ -1,3 +1,4 @@
+//This function hide all kinds of errors by chang their visibility to hidden
 function hideErrors()
 {
     document.getElementById("name-error").style.visibility = 'hidden'
@@ -8,6 +9,10 @@ function hideErrors()
 
 let prediction = null
 
+//This function runs when the user press the submit button
+//It checks name and then send the request to API and shows the answer in prediction part
+//Also if there is something in memory it shows it in memory part
+//Also server error is handled
 function checkForm(event)
 {
     prediction = null
@@ -52,6 +57,9 @@ function checkForm(event)
 document.getElementById("submit").onclick = checkForm;
 
 
+//This function runs when the user press the save button
+//This button first checks if any of the radio buttons is pressed then it save it
+//But if there is not any radio button pressed then it applies the prediction result
 function saveForm(event)
 {
     hideErrors()
@@ -102,7 +110,7 @@ function saveForm(event)
 
 document.getElementById("save").onclick = saveForm;
 
-
+//This button deletes the Gender for entered name
 function clearData(event)
 {
     let name = document.getElementById('name').value
