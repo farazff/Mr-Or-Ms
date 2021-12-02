@@ -2,11 +2,14 @@ function hideErrors()
 {
     document.getElementById("name-error").style.visibility = 'hidden'
     document.getElementById("gender-error").style.visibility = 'hidden'
-
+    document.getElementById("prediction-error").style.visibility = 'hidden'
 }
+
+let prediction = null
 
 function checkForm(event)
 {
+    prediction = null
     hideErrors()
     let reg_expr = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/
     let name = document.getElementById('name').value
@@ -26,7 +29,13 @@ function checkForm(event)
     fetch(url)
         .then(response => response.json())
         .then((data) => {
-                            document.getElementById('gender').innerHTML = JSON.stringify(data['gender']);
+                            if(data['gender'] == null)
+                            {
+                                document.getElementById("prediction-error").style.visibility = 'visible'
+                                return
+                            }
+                            prediction = JSON.stringify(data['gender'])
+                            document.getElementById('gender').innerHTML = JSON.stringify(data['gender'])
                             document.getElementById('percentage').innerHTML = JSON.stringify(data['probability'])
                         })
 
@@ -48,13 +57,11 @@ function saveForm(event)
     if(name.length > 255)
     {
         document.getElementById("name-error").style.visibility = 'visible'
-        return
     }
 
     if(!reg_expr.test(name))
     {
         document.getElementById("name-error").style.visibility = 'visible'
-        return
     }
 
     let rbs = document.querySelectorAll('input[name="gender"]');
@@ -69,16 +76,25 @@ function saveForm(event)
     }
 
 
-    if(selectedValue == null)
+    if(selectedValue == null && prediction == null)
     {
         document.getElementById("gender-error").style.visibility = 'visible'
         return
     }
 
-    localStorage.removeItem(name)
-    localStorage.setItem(name, selectedValue);
-    location.reload()
-
+    if(selectedValue != null)
+    {
+        localStorage.removeItem(name)
+        localStorage.setItem(name, selectedValue);
+        location.reload()
+        return
+    }
+    if(prediction != null)
+    {
+        localStorage.removeItem(name)
+        localStorage.setItem(name, prediction);
+        location.reload()
+    }
 }
 
 document.getElementById("save").onclick = saveForm;

@@ -122,3 +122,8 @@ input[type=text]:focus {
 {
     visibility: hidden;
 }
+
+#prediction-error
+{
+    visibility: hidden;
+}
