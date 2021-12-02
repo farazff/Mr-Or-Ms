@@ -14,13 +14,15 @@
             <h1>Mr. or Ms.?</h1>
             <div>
                 <label class="label" for="name">First Name:</label>
-                <input id="name" type="text" name="name" value="" maxlength="64"/>
+                <input id="name" type="text" name="name" value=""/>
             </div>
             <div>
                 <label class="label">Gender:</label>
                 <input type="radio" name="gender" value="M"/> male
                 <input type="radio" name="gender" value="F"/> female
             </div>
+            </br>
+            </br>
 
             <div class="btn-group">
                 <button class="button" type="button">Submit</button>
@@ -35,14 +37,17 @@
 
         <section id="prediction">
             <h1>Prediction</h1>
-            <p id="percentage"></p>
-            <p id="gender"></p>
+            <label class="label">Gender:</label>
+            <span id="percentage">----</span>
+
+            </br>
+            <label class="label">Percentage:</label>
+            <spanp id="gender">----</spanp>
         </section>
 
         <section id="memory">
             <h1>Saved answer</h1>
-            <p id="saved"></p>
-
+            <p id="saved">-----</p>
             <div class="btn-group">
                 <button class="button" type="button">Clear</button>
             </div>
