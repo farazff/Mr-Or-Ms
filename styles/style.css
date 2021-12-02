@@ -1,3 +1,4 @@
+/*This block creates a flex in hole page to put everything in middle*/
 html
 {
     height: 100%;
@@ -5,29 +6,39 @@ html
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: sans-serif;
 }
 
+/*This block puts background for whole page and handles the background while zoom in and oom out*/
 body
 {
-    background-image: url("../images/background.jpg");
+    display: flex;
+    background-image: url('../images/background.jpg');
+    background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
 }
 
+/*This block change the width of the name input bar*/
 #name
 {
     width: 50%;
 }
 
+/*This block set a padding to all div tags in order to make space between all elements*/
 div
 {
     padding-top: 5px;
 }
 
+/*This block makes the fonts of name, gender, ... labels bigger*/
 .label
 {
-    font-size: 17px;
+    font-size: 18px;
 }
 
+/*This block make the main part of the page flex and sets background*/
 #mainPage
 {
     background-image: url("../images/from-back.jpg");
@@ -42,6 +53,7 @@ div
     padding: 5px 10px;
 }
 
+/*This block manages the left and right part of the page and creates a flex container*/
 .bar
 {
     display: flex;
@@ -54,7 +66,7 @@ div
     margin: 2px;
 }
 
-
+/*This block manages the buttons*/
 .button {
     display: inline-block;
     padding: 10px 15px;
@@ -70,49 +82,57 @@ div
     box-shadow: 0 3px #999;
 }
 
+/*This block manages the buttons when hovering*/
 .button:hover {background-color: RGB(26, 43, 40)}
 
+/*This block manages the buttons when pressing them*/
 .button:active {
     background-color: RGB(26, 43, 40);
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
 
+/*This block designs the input for name*/
 input[type=text] {
     width: 55%;
     margin: 4px 0;
     box-sizing: border-box;
     border: 3px solid #ccc;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
 }
 
+/*This block designs the input for name when selected and typing*/
 input[type=text]:focus {
     border: 3px solid #555;
 }
 
+/*This block sets the color of error messages to RED*/
 .error
 {
     font-size: 15px;
     color: red
 }
 
+/*This block hides the name error*/
 #name-error
 {
     visibility: hidden;
 }
 
+/*This block hides the gender error*/
 #gender-error
 {
     visibility: hidden;
 }
 
+/*This block hides the prediction error*/
 #prediction-error
 {
     visibility: hidden;
 }
 
+/*This block hides the network error*/
 #network-error
 {
     visibility: hidden;
