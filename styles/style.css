@@ -70,8 +70,8 @@ div
 }
 
 input[type=text] {
-    width: 60%;
-    padding: 8px 16px;
+    width: 55%;
+    padding: 3px 16px;
     margin: 4px 0;
     box-sizing: border-box;
     border: 3px solid #ccc;
@@ -82,12 +82,4 @@ input[type=text] {
 
 input[type=text]:focus {
     border: 3px solid #555;
-}
-
-#memory
-{
-    border-style: dashed;
-    border-width: 2px;
-    padding: 8px;
-    margin-top: 8px;
 }
