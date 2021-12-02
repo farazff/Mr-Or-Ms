@@ -10,7 +10,7 @@ html
 
 body
 {
-    background-image: url("back.jpg");
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
 }
 
@@ -26,7 +26,7 @@ div
 
 #mainPage
 {
-    background-image: url("bb.jpg");
+    background-image: url("../images/from-back.jpg");
     background-repeat: no-repeat;
     /*background-color: RGB(182, 31, 209);*/
     display: flex;
