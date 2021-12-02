@@ -20,7 +20,7 @@ body
 
 div
 {
-    padding-top: 15px;
+    padding-top: 5px;
 }
 
 .label
@@ -54,20 +54,44 @@ div
 }
 
 
-.btn-group .button {
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
     background-color: RGB(42, 69, 63);
     border: none;
-    color: white;
-    padding: 10px 27px;
-    text-align: center;
-    font-size: 15px;
-    cursor: pointer;
-    border-radius: 7px;
+    border-radius: 12px;
+    box-shadow: 0 3px #999;
 }
 
-.btn-group .button:hover {
+.button:hover {background-color: RGB(26, 43, 40)}
+
+.button:active {
     background-color: RGB(26, 43, 40);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
+
+
+/*.btn-group .button {*/
+/*    background-color: RGB(42, 69, 63);*/
+/*    border: none;*/
+/*    color: white;*/
+/*    padding: 10px 27px;*/
+/*    text-align: center;*/
+/*    font-size: 15px;*/
+/*    cursor: pointer;*/
+/*    border-radius: 7px;*/
+/*}*/
+
+/*.btn-group .button:hover {*/
+/*    background-color: RGB(26, 43, 40);*/
+/*}*/
 
 input[type=text] {
     width: 55%;
@@ -81,4 +105,20 @@ input[type=text] {
 
 input[type=text]:focus {
     border: 3px solid #555;
+}
+
+.error
+{
+    font-size: 15px;
+    color: red
+}
+
+#name-error
+{
+    visibility: hidden;
+}
+
+#gender-error
+{
+    visibility: hidden;
 }

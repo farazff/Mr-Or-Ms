@@ -17,11 +17,13 @@
             <div>
                 <label class="label" for="name">First Name:</label>
                 <input id="name" type="text" name="name" value=""/>
+                <p class="error" id="name-error">*incorrect name</p>
             </div>
             <div>
                 <label class="label">Gender:</label>
-                <input type="radio" name="gender" value="M"/> male
-                <input type="radio" name="gender" value="F"/> female
+                <input type="radio" name="gender" value="male"/> male
+                <input type="radio" name="gender" value="female"/> female
+                <p class="error" id="gender-error">*select one item</p>
             </div>
             </br>
             </br>
@@ -51,7 +53,7 @@
             <h1>Saved answer</h1>
             <p id="saved">-----</p>
             <div class="btn-group">
-                <button class="button" type="button">Clear</button>
+                <button id="clear" class="button" type="button">Clear</button>
             </div>
         </section>
 
