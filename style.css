@@ -1,0 +1,83 @@
+
+html
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body
+{
+    background-image: url("back.jpg");
+    background-repeat: no-repeat;
+}
+
+div
+{
+    padding: 15px;
+}
+
+.label
+{
+    font-size: 17px;
+}
+
+#mainPage
+{
+    background-image: url("bb.jpg");
+    background-repeat: no-repeat;
+    /*background-color: RGB(182, 31, 209);*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    border-width: 1px;
+    border-radius: 15px;
+    width: auto;
+    padding: 10px 20px;
+
+}
+
+.bar
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 30px;
+}
+
+
+.btn-group .button {
+    background-color: RGB(42, 69, 63);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-group .button:hover {
+    background-color: RGB(26, 43, 40);
+}
+
+input[type=text] {
+    width: 60%;
+    padding: 8px 16px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mr. or Ms.?</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div id="mainPage">
+
+    <section class="bar">
+        <form>
+            <h1>Mr. or Ms.?</h1>
+            <div>
+                <label class="label" for="name">First Name:</label>
+                <input id="name" type="text" name="name" value="" maxlength="64"/>
+            </div>
+            <div>
+                <label class="label">Gender:</label>
+                <input type="radio" name="gender" value="M"/> male
+                <input type="radio" name="gender" value="F"/> female
+            </div>
+
+            <div class="btn-group">
+                <button class="button" type="button">Submit</button>
+                <button class="button" type="button">Save</button>
+            </div>
+        </form>
+
+    </section>
+
+
+    <section class="bar">
+
+        <section id="prediction">
+            <h1>Prediction</h1>
+            <p id="percentage"></p>
+            <p id="gender"></p>
+        </section>
+
+        <section id="memory">
+            <h1>Saved answer</h1>
+            <p id="saved"></p>
+
+            <div class="btn-group">
+                <button class="button" type="button">Clear</button>
+            </div>
+        </section>
+
+    </section>
+
+</div>
+
+</body>
+
+</html>
