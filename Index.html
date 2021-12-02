@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Mr. or Ms.?</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/js.js" defer></script>
+
 </head>
 <body>
 
@@ -25,8 +27,8 @@
             </br>
 
             <div class="btn-group">
-                <button class="button" type="button">Submit</button>
-                <button class="button" type="button">Save</button>
+                <button id="submit" class="button" type="button">Submit</button>
+                <button id="save" class="button" type="button">Save</button>
             </div>
         </form>
 
@@ -38,11 +40,11 @@
         <section id="prediction">
             <h1>Prediction</h1>
             <label class="label">Gender:</label>
-            <span id="percentage">----</span>
+            <span id="gender">----</span>
 
             </br>
             <label class="label">Percentage:</label>
-            <spanp id="gender">----</spanp>
+            <spanp id="percentage">----</spanp>
         </section>
 
         <section id="memory">
