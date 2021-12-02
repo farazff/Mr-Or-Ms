@@ -3,6 +3,7 @@ function hideErrors()
     document.getElementById("name-error").style.visibility = 'hidden'
     document.getElementById("gender-error").style.visibility = 'hidden'
     document.getElementById("prediction-error").style.visibility = 'hidden'
+    document.getElementById("network-error").style.visibility = 'hidden'
 }
 
 let prediction = null
@@ -37,7 +38,9 @@ function checkForm(event)
                             prediction = JSON.stringify(data['gender'])
                             document.getElementById('gender').innerHTML = JSON.stringify(data['gender'])
                             document.getElementById('percentage').innerHTML = JSON.stringify(data['probability'])
-                        })
+                        }).catch((error) => {
+        document.getElementById("network-error").style.visibility = 'visible'
+    })
 
     let saved = localStorage.getItem(name)
     if(saved !== null)

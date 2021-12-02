@@ -35,11 +35,11 @@ div
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
     border-width: 1px;
     border-radius: 15px;
     width: auto;
-    padding: 10px 20px;
+    padding: 5px 10px;
 }
 
 .bar
@@ -47,7 +47,8 @@ div
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    border-style: solid;
     border-radius: 10px;
     padding: 12px;
     margin: 2px;
@@ -76,22 +77,6 @@ div
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-
-
-/*.btn-group .button {*/
-/*    background-color: RGB(42, 69, 63);*/
-/*    border: none;*/
-/*    color: white;*/
-/*    padding: 10px 27px;*/
-/*    text-align: center;*/
-/*    font-size: 15px;*/
-/*    cursor: pointer;*/
-/*    border-radius: 7px;*/
-/*}*/
-
-/*.btn-group .button:hover {*/
-/*    background-color: RGB(26, 43, 40);*/
-/*}*/
 
 input[type=text] {
     width: 55%;
@@ -124,6 +109,11 @@ input[type=text]:focus {
 }
 
 #prediction-error
+{
+    visibility: hidden;
+}
+
+#network-error
 {
     visibility: hidden;
 }
