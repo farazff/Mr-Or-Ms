@@ -8,6 +8,7 @@ function hideErrors()
 }
 
 let prediction = null
+let submitIsFor = null
 
 //This function runs when the user press the submit button
 //It checks name and then send the request to API and shows the answer in prediction part
@@ -41,6 +42,7 @@ function checkForm(event)
                                 return
                             }
                             prediction = JSON.stringify(data['gender'])
+                            submitIsFor = name
                             document.getElementById('gender').innerHTML = JSON.stringify(data['gender'])
                             document.getElementById('percentage').innerHTML = JSON.stringify(data['probability'])
                         }).catch((error) => {
@@ -97,14 +99,18 @@ function saveForm(event)
     {
         localStorage.removeItem(name)
         localStorage.setItem(name, selectedValue);
-        location.reload()
+        document.getElementById("saved").innerHTML = localStorage.getItem(name);
         return
     }
-    if(prediction != null)
+    if(prediction != null && submitIsFor === name)
     {
         localStorage.removeItem(name)
         localStorage.setItem(name, prediction);
-        location.reload()
+        document.getElementById("saved").innerHTML = localStorage.getItem(name);
+    }
+    if(submitIsFor !== name)
+    {
+        document.getElementById("gender-error").style.visibility = 'visible'
     }
 }
 
@@ -115,7 +121,7 @@ function clearData(event)
 {
     let name = document.getElementById('name').value
     localStorage.removeItem(name)
-    location.reload()
+    document.getElementById("saved").innerHTML = 'No history'
 }
 
 document.getElementById("clear").onclick = clearData;
